@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+
+    background-color: rgb(22, 22, 44);
+}
+
+.content {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /*    align-content: center;
+    justify-content: center; */
+}
+
+.game-menu {
+    grid-row: 3/3;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.score{
+    grid-row: 1/1;
+    grid-column: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.points{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+    width: 100%;
+    background-color: black;
+    color: red;
+    font-size: 5vh;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 4vh;
+
+    border: 1px solid black;
+    text-decoration: none;
+
+    background-color: #018905;
+    padding: 0px 0px;
+    transition: transform 0.2s ease-in-out;
+
+    font-size: 3vh;
+    font-weight: 500;
+    color: #fff;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: #018905;
+    background-color: white;
+    border: 3px solid #018905;
+}
+
+.button:active {
+    color: yellow;
+    background-color: black;
+    border: 3px solid yellow;
+}
+
+#start-Button {
+    grid-row: 2/2;
+    grid-column: 1/1;
+}
+
+#reset-Button {
+    grid-row: 2/2;
+    grid-column: 3/3;
+}
+
+.game-over {
+    display: flex;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 60vh;
+    height: 50vh;
+
+    font-size: 10vh;
+    font-weight: 700;
+    color: rgb(158, 4, 4);
+    text-shadow: 3px 1px black;
+    opacity: 0;
+
+}
+
+.game-over-visible {
+    opacity: 1;
+}
+
+#game {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 60vh;
+    height: 50vh;
+    background-color: white;
+    color: #fad108fa;
+}
